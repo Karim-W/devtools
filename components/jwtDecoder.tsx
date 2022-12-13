@@ -1,11 +1,7 @@
 import React from "react";
 import { CopyButton } from "./copyButton";
-
+import { convertBase64ToString } from "../utils/base64";
 export default function JWTDecoder() {
-	const convertBase64ToString = (base64: string) => {
-		const buff = Buffer.from(base64, "base64");
-		return buff.toString("ascii");
-	};
 	const [header, setHeader] = React.useState<string>("");
 	const [body, setBody] = React.useState<string>("");
 	const [jawt, setJawt] = React.useState<string>("");
@@ -62,7 +58,7 @@ export default function JWTDecoder() {
 				<p className="text-4xl font-light">Signiture:</p>
 				<textarea
 					className="w-full h-96 bg-stone-900 text-white p-4 rounded-lg"
-					placeholder="Paste your JSON here"
+					placeholder="Paste your Public key here"
 					onChange={(e) => {
 						setSignature(e.target.value);
 					}}

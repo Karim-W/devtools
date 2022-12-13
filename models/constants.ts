@@ -3,6 +3,10 @@ export const TOOLS_TABS = {
 	JSON_FORMATTER: "JSON Formatter",
 	JWT_DECODE: "JWT Decode",
 	HTML_DISPLAY: "HTML Display",
+	BASE_64: "Base64",
+	STRING_GENERATOR: "String Generator",
+	MARKDOWN: "Markdown",
+	HASH: "Hash",
 };
 
 export const BASE_CSS_PROPERTIES = {
