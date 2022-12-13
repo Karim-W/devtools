@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { MatchTab } from "../components";
 import Base64 from "../components/base64";
+import Diff from "../components/diff";
 import Epoch from "../components/epoch";
 import HTMLDisplay from "../components/htmlDisplay";
 import JsonFormatter from "../components/jsonFormatter";
@@ -20,6 +21,7 @@ export default function Home() {
 		TOOLS_TABS.HTML_DISPLAY,
 		TOOLS_TABS.BASE_64,
 		TOOLS_TABS.STRING_GENERATOR,
+		TOOLS_TABS.DIFF,
 	];
 	const [activeTab, setActiveTab] = React.useState("");
 	const handleTabChange = (tab: string) => {
@@ -43,6 +45,7 @@ export default function Home() {
 				{activeTab === TOOLS_TABS.HTML_DISPLAY && <HTMLDisplay />}
 				{activeTab === TOOLS_TABS.BASE_64 && <Base64 />}
 				{activeTab === TOOLS_TABS.STRING_GENERATOR && <StringGenerator />}
+				{activeTab === TOOLS_TABS.DIFF && <Diff />}
 				{activeTab === "" && (
 					<div className="w-full h-full flex flex-col justify-center items-center">
 						<p className="text-white text-2xl">

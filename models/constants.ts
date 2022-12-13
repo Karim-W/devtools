@@ -7,6 +7,7 @@ export const TOOLS_TABS = {
 	STRING_GENERATOR: "String Generator",
 	MARKDOWN: "Markdown",
 	HASH: "Hash",
+	DIFF: "Diff",
 };
 
 export const BASE_CSS_PROPERTIES = {
