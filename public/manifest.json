@@ -1,0 +1,10 @@
+{
+"theme_color" : "#b0763f"
+"background_color" : "#a37b55"
+"display" : "minimal-ui"
+"scope" : "/"
+"start_url" : "/"
+"name" : "Devtools"
+"short_name" : "Devtools"
+"description" : "A Collection of tools that I use daily for Development all in one place"
+}
