@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import mermaid from "mermaid";
 import CopiedTextArea from "./copiedTextArea";
