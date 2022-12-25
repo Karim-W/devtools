@@ -20,8 +20,9 @@ export default function CopiedTextBox({
 	};
 	return (
 		<div
-			className={`flex flex-row justify-between items-center p-2 bg-stone-900 rounded-md text-stone-200 gap-4 ${className ?? ""
-				}`}
+			className={`flex flex-row justify-between
+			items-center p-2 bg-stone-900 rounded-md text-stone-200 gap-4 ${className ?? ""
+				} flex-wrap break-all`}
 		>
 			{text}
 			<button
