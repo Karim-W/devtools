@@ -3,9 +3,11 @@ import React from "react";
 export default function LeftTab({
 	Tabs,
 	handleTabChange,
+	currentTab,
 }: {
 	Tabs: string[];
 	handleTabChange: (tab: string) => void;
+	currentTab: string;
 }) {
 	const [hidden, setHidden] = React.useState<string>("");
 	const handlehiddenChange = () => {
@@ -20,7 +22,7 @@ export default function LeftTab({
 		return (
 			<div className="w-fit h-full bg-stone-800 flex flex-col justify-center items-center">
 				<button
-					className="text-stone-900 w-4 h-ful py-2 flex 
+					className="text-stone-900 w-4 h-ful py-2 flex z-50 
 			flex-row items-center justify-center bg-gray-100 top-1/2
 			rounded-r-full hover:scale-95"
 					onClick={handlehiddenChange}
@@ -60,7 +62,11 @@ export default function LeftTab({
 							}}
 							className={`w-full h-12 border-b-2 border-stone-600
 								flex flex-row justify-center items-center text-[1.25rem] 
-								text-center hover:opacity-20 hover:bg-black hover:rounded-lg`}
+								text-center hover:opacity-20 hover:bg-black
+								hover:rounded-lg ${tab !== currentTab
+									? "text-zinc-200"
+									: "text-yellow-400 opacity-80"
+								}`}
 						>
 							{tab}
 						</div>
