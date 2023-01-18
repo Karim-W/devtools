@@ -12,7 +12,7 @@ export default function JsonFormatter() {
 		}
 	}, [json]);
 	return (
-		<div className="w-full flex flex-col p-8 gap-8 justify-evenly">
+		<div className="w-full flex flex-row p-8 gap-8 justify-evenly">
 			<textarea
 				className="w-full h-96 bg-stone-900 text-white p-4 rounded-lg"
 				placeholder="Paste your JSON here"
