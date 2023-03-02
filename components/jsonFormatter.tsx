@@ -12,19 +12,19 @@ export default function JsonFormatter() {
 		}
 	}, [json]);
 	return (
-		<div className="w-full flex flex-col p-8 gap-8 justify-evenly">
+		<div className="w-full h-[calc(100vh-8rem)] flex flex-row p-8 gap-8 justify-evenly">
 			<textarea
-				className="w-full h-96 bg-stone-900 text-white p-4 rounded-lg"
+				className="w-full h-full bg-stone-900 text-white p-4 rounded-lg"
 				placeholder="Paste your JSON here"
 				onChange={(e) => {
 					setJson(e.target.value);
 				}}
 			/>
-			<div className="relative w-full h-96 bg-stone-900 text-white rounded-lg">
+			<div className="relative w-full h-full bg-stone-900 text-white rounded-lg">
 				<textarea
 					readOnly
 					value={parsed}
-					className="w-full bg-transparent h-96 text-white p-4 rounded-lg"
+					className="w-full bg-transparent h-full text-white p-4 rounded-lg"
 				>
 					{parsed}
 				</textarea>

@@ -8,6 +8,7 @@ export const TOOLS_TABS = {
 	MARKDOWN: "Markdown",
 	HASH: "Hash",
 	DIFF: "Diff",
+	MERMAID: "Mermaid",
 };
 
 export const BASE_CSS_PROPERTIES = {

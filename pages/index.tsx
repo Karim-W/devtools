@@ -5,10 +5,13 @@ import { MatchTab } from "../components";
 import Base64 from "../components/base64";
 import Diff from "../components/diff";
 import Epoch from "../components/epoch";
+import Hash from "../components/hash";
 import HTMLDisplay from "../components/htmlDisplay";
 import JsonFormatter from "../components/jsonFormatter";
 import JWTDecoder from "../components/jwtDecoder";
 import LeftTab from "../components/leftpane";
+import MarkdownPreview from "../components/markdownPreview";
+import Mermaid from "../components/mermaid";
 import StringGenerator from "../components/stringGenerator";
 import { TOOLS_TABS } from "../models/constants";
 import styles from "../styles/Home.module.css";
@@ -22,6 +25,8 @@ export default function Home() {
 		TOOLS_TABS.BASE_64,
 		TOOLS_TABS.STRING_GENERATOR,
 		TOOLS_TABS.DIFF,
+		TOOLS_TABS.MARKDOWN,
+		TOOLS_TABS.HASH,
 	];
 	const [activeTab, setActiveTab] = React.useState("");
 	const handleTabChange = (tab: string) => {
@@ -29,7 +34,11 @@ export default function Home() {
 	};
 	return (
 		<div className="h-[100vh] min-w-screen flex flex-row">
-			<LeftTab Tabs={Tabs} handleTabChange={handleTabChange} />
+			<LeftTab
+				Tabs={Tabs}
+				handleTabChange={handleTabChange}
+				currentTab={activeTab}
+			/>
 			<div className="bg-stone-800 w-full h-full flex flex-col justify-start items-center overflow-scroll p-4">
 				{/* <div className="w-full h-16 backdrop-blur-sm text-white shadow-md drop-shadow-md grid place-items-center"> */}
 				<div className="w-full h-16 text-white grid place-items-center">
@@ -46,6 +55,8 @@ export default function Home() {
 				{activeTab === TOOLS_TABS.BASE_64 && <Base64 />}
 				{activeTab === TOOLS_TABS.STRING_GENERATOR && <StringGenerator />}
 				{activeTab === TOOLS_TABS.DIFF && <Diff />}
+				{activeTab === TOOLS_TABS.MARKDOWN && <MarkdownPreview />}
+				{activeTab === TOOLS_TABS.HASH && <Hash />}
 				{activeTab === "" && (
 					<div className="w-full h-full flex flex-col justify-center items-center">
 						<p className="text-white text-2xl">
