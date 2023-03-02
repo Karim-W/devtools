@@ -30,7 +30,7 @@ export default function Home() {
 	return (
 		<div className="h-[100vh] min-w-screen flex flex-row">
 			<LeftTab Tabs={Tabs} handleTabChange={handleTabChange} />
-			<div className="bg-stone-800 w-full h-full flex flex-col justify-start items-center">
+			<div className="bg-stone-800 w-full h-full flex flex-col justify-start items-center overflow-scroll p-4">
 				{/* <div className="w-full h-16 backdrop-blur-sm text-white shadow-md drop-shadow-md grid place-items-center"> */}
 				<div className="w-full h-16 text-white grid place-items-center">
 					{activeTab !== "" && (
